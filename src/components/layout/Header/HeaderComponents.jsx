@@ -1,3 +1,4 @@
+import React from "react";
 import { Layout, Row } from "antd";
 import { Link } from "react-router-dom";
 // import { Navbar } from "../../../assets/index";
@@ -5,6 +6,7 @@ import "./headerComponent.css";
 import { useState } from "react";
 import { Menu } from "antd";
 import { MENU_ITEM } from "../constans";
+import { Logo } from "../../../assets/index";
 
 const HeaderComponents = () => {
   const { Header } = Layout;
@@ -42,7 +44,7 @@ const HeaderComponents = () => {
               }}
               onClick={() => setCurrent("")}
             />
-            EduArt
+            <img src={Logo} />
           </Link>
 
           <Menu
@@ -55,37 +57,6 @@ const HeaderComponents = () => {
           />
         </Row>
       </Header>
-      {/* <div className="header-layout">
-          <div className="headerWrapper">
-            <Link to="/">
-              <div
-                style={{
-                
-                  float: "left",
-                  width: 120,
-                  height: 31,
-                  margin: "16px 24px 16px 0",
-                  background: "rgba(255, 255, 255, 0.2)",
-                }}
-              />
-              EduArt
-            </Link>
-            <div className="menu">
-              <Link to="/course" className="link">
-                Course
-              </Link>
-              <Link className="link">Product</Link>
-              <Link className="link">Our Culture</Link>
-              <Link to="/kamis" className="link">
-                Kamis
-              </Link>
-              <Link className="link">Careers</Link>
-            </div>
-            <div className="button">
-              <Button>Admin</Button>
-            </div>
-          </div>
-        </div> */}
     </>
   );
 };

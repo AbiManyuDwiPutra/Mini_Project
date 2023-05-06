@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const MENU_ITEM = [
   {
     label: <Link to="/homePage">Home Page</Link>,
-    key: "/",
+    key: "/homePage",
   },
   {
     label: <Link to="/course">Course</Link>,
@@ -16,9 +16,6 @@ export const MENU_ITEM = [
     <Link to="/loginPage">
       <Button
         type="primary"
-        // onClick={() => {
-        //   localStorage.removeItem("token");
-        // }}
         danger
       >
         Admin

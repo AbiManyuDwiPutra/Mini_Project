@@ -31,7 +31,7 @@ const HomePage = () => {
       text:"Sedang Dalam Pengembangan"
     })
   }
-
+  
   const { Meta } = Card;
   const { Title } = Typography;
   return (

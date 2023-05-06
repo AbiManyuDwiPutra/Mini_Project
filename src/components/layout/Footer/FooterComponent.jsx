@@ -13,7 +13,7 @@ const FooterComponent = () => {
   const { Footer } = Layout;
   return (
     <>
-      <Footer className="footer">
+      {/* <Footer className="footer">
         <Row>
           <Col span={8}>
             <div className="content-copy">
@@ -96,7 +96,13 @@ const FooterComponent = () => {
             </div>
           </Col>
         </Row>
-      </Footer>
+       <Footer
+          style={{
+            textAlign: "center",
+          }}
+        >
+          Ant Design ©2023 Created by Ant UED
+        </Footer>
     </>
   );
 };

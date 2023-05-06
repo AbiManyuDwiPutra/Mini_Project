@@ -43,4 +43,3 @@ export const faqData = [
     foto: "https://via.placeholder.com/150x150"
   },
 ]
-

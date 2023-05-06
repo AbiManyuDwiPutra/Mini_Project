@@ -32,7 +32,7 @@ const HeaderComponents = () => {
         }}
       >
         <Row justify="space-between">
-          <Link to="/homePage">
+          <Link to="/">
             <div
               className="logo"
               style={{

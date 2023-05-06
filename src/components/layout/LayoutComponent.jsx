@@ -1,8 +1,8 @@
-import React from "react";
 import { Layout } from "antd";
 import HeaderComponent from "./Header/HeaderComponents";
 import FooterComponent from "./Footer/FooterComponent";
 
+// eslint-disable-next-line react/prop-types
 const LayoutComponent = ({ children }) => {
   const { Content } = Layout;
   return (

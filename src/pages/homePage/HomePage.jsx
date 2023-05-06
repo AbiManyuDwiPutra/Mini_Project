@@ -1,5 +1,4 @@
 import { Button, Col, Row, Card } from "antd";
-import React from "react";
 import "./homePage.css";
 import { Cover1, Mentoring, Offline, Online, Toga } from "../../assets/index";
 import { Typography } from "antd";
@@ -9,9 +8,30 @@ import {
   FileTextOutlined,
   ProjectOutlined,
 } from "@ant-design/icons";
-import { cardsData } from "./constants";
+import { cardsData, faqData } from "./constants";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { useNavigate } from "react-router-dom";
+
+
 
 const HomePage = () => {
+
+  const navigate = useNavigate()
+
+  const MySwal = withReactContent(Swal)
+
+  const onClickOfflineClass = () => {
+    navigate("/offlineClass")
+  }
+
+  const onClickOnineClass = () =>{
+    MySwal.fire({
+      icon:"warning",
+      text:"Sedang Dalam Pengembangan"
+    })
+  }
+  
   const { Meta } = Card;
   const { Title } = Typography;
   return (
@@ -33,25 +53,28 @@ const HomePage = () => {
           </div>
         </Col>
       </Row>
+      <div className="section1">
       <Row justify="center">
         <Col>
           <div className="murid">
-            <img src={Toga} alt="" className="toga" />
-            <p className="text">
-              100+ <br /> Total Murid
+            <img height={110} src={Toga} alt="" className="toga" />
+            <p style={{marginTop:10, fontWeight:'bold'}} className="text-section1">
+              100+ <br /><p style={{fontWeight:'normal'}}> Total Murid</p>
             </p>
           </div>
         </Col>
         <Col>
           <div className="kursus">
             <img src={Mentoring} alt="" className="mentoring" />
-            <p className="text2">
-              100+ <br /> Total Murid
+            <p style={{marginTop:10, fontWeight:'bold'}} className="text-section1">
+              3+ <br /><p style={{fontWeight:'normal'}}> Total Kursus</p>
             </p>
           </div>
         </Col>
       </Row>
+      </div>
       {/* </div> */}
+      <div className="card-section2">
       <div className="produk">
         <h1>Produk kelas kami</h1>
         <p>
@@ -61,10 +84,11 @@ const HomePage = () => {
       </div>
       <div className="card-product">
         <Row justify="center" gutter={[16]}>
-          <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+          <Col style={{marginRight:70}} xs={24} sm={12} md={8} lg={6} xl={6}>
             <Card
+              className="box-shadow"
               hoverable
-              style={{ width: "100%", margin: "16px" }}
+              style={{ width: "100%", margin: "16px"}}
               cover={<img alt="example" src={Online} />}
               // title = "Online Class"
             >
@@ -93,15 +117,15 @@ const HomePage = () => {
                     Belajar Mandiri
                   </li>
                 </ul>
-                <h3>Rp.20.000</h3>
+                <h3>Rp.20.000/Bulan</h3>
               </div>
-              <Button style={{ marginTop: "16px" }}>Mulai</Button>
+              <Button style={{ marginTop: "16px", width:"100%", padding:10, height:50, backgroundColor:'#FB8C00', fontWeight:"bold", color:"white", border:0 }} onClick={onClickOnineClass}>Mulai !</Button>
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6} xl={6}>
-            <Card
+            <Card className="box-shadow"
               hoverable
-              style={{ width: "100%", margin: "16px" }}
+              style={{ width: "100%", margin: "16px"  }}
               cover={<img alt="example" src={Offline} />}
             >
               <Title>Offline Class</Title>
@@ -129,27 +153,26 @@ const HomePage = () => {
                     Belajar Mandiri
                   </li>
                 </ul>
-                <h3>Rp.50.000</h3>
+                <h3>Rp.50.000/ Bulan</h3>
               </div>
-              <Button style={{ marginTop: "16px", justify: "center" }}>
-                Mulai
-              </Button>
-            </Card>
+              <Button style={{ marginTop: "16px", width:"100%", padding:10, height:50, backgroundColor:'#FB8C00', fontWeight:"bold", color:"white", border:0 }} onClick={onClickOfflineClass}>Mulai !</Button>
+             </Card>
           </Col>
         </Row>
       </div>
       <div className="artikel">
         <h1>Artikel Kami</h1>
-        <Row gutter={[16, 16]} justify="center">
+        <Row gutter={[16, 16, 16]}>
           {cardsData.map((card, index) => (
             <Col xs={24} sm={12} md={8} key={index}>
               <Card
+                className="box-shadow"
                 hoverable
-                style={{ width: 400, height: 750,  }}
+                style={{ width: 400, height: 730, marginTop:30, marginLeft:60 }}
                 cover={<img alt={card.title} src={card.cover} />}
                 actions={[
-                  <Button type="primary" style={{ backgroundColor: "orange" }}>
-                    Read More
+                  <Button key={index} type="primary" style={{ width:"70%", padding:10, height:50, backgroundColor:'#FB8C00', fontWeight:"bold", color:"white", border:0 }} >
+                    Baca Selengkapnya
                   </Button>,
                 ]}
               >
@@ -159,8 +182,25 @@ const HomePage = () => {
           ))}
         </Row>
       </div>
-      <div>
+      </div>
+      <div className="section-last">
         <h1>Apa Kata Mereka?</h1>
+        <Row gutter={[16, 16, 16]}>
+          {faqData.map((card, index) => (
+            <Col xs={24} sm={12} md={8} key={index}>
+              <Card
+                className="box-shadow"
+                hoverable
+                style={{ width: 400, height: 400, marginTop:30, marginLeft:60 }}
+                actions={[
+                  <img key={index} alt="example" src={card.foto} />,
+                ]}
+              >
+                <Meta title={card.title} description={card.description} />
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 export const JENIS_KELAS = [
-    
+
 ]
+
 export const cardsData = [
   {
     title: "Sangkar - Sangkar Pilu",
@@ -21,3 +22,24 @@ export const cardsData = [
     cover: "https://via.placeholder.com/150x150",
   },
 ];
+
+export const faqData = [
+  {
+    title: "Platform Hebat !!",
+    description:
+      "Diamku adalah sebait kata Yang takkan pernah bisa menjadi paragraf, Aksaraku sepi, Sendu, Mengais pada senja yang ingin terpejam. Sudut lampu kota serta langit gelap adalah senduku Mereka seakan berbicara dalam alam bawah sadarku ‘untuk apa bertahan sedangkan ia mencintai wanita lain?’",
+    foto: "https://via.placeholder.com/150x150"
+  },
+  {
+    title: "Platform Hebat !!",
+    description:
+      "Diamku adalah sebait kata Yang takkan pernah bisa menjadi paragraf, Aksaraku sepi, Sendu, Mengais pada senja yang ingin terpejam. Sudut lampu kota serta langit gelap adalah senduku Mereka seakan berbicara dalam alam bawah sadarku ‘untuk apa bertahan sedangkan ia mencintai wanita lain?’",
+    foto: "https://via.placeholder.com/150x150"
+  },
+  {
+    title: "Platform Hebat !!",
+    description:
+      "Diamku adalah sebait kata Yang takkan pernah bisa menjadi paragraf, Aksaraku sepi, Sendu, Mengais pada senja yang ingin terpejam. Sudut lampu kota serta langit gelap adalah senduku Mereka seakan berbicara dalam alam bawah sadarku ‘untuk apa bertahan sedangkan ia mencintai wanita lain?’",
+    foto: "https://via.placeholder.com/150x150"
+  },
+]

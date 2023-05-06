@@ -11,7 +11,6 @@ export const MENU_ITEM = [
     label: <Link to="/course">Course</Link>,
     key: "/course",
   },
-  
 {
   label: (
     <Link to="/loginPage">

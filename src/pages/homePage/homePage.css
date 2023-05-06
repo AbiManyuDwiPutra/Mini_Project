@@ -1,0 +1,74 @@
+  
+  .homepage-title {
+    width: 600px;
+    margin: 50px;
+    font-size: 30px;
+    color: #19345e;
+  }
+  
+  .homepage-title > p {
+    font-size: 18px;
+  }
+  
+  .homepage-title > Button {
+    background-color: #f47522;
+    border-radius: 20px;
+    height: 45px;
+    width: 140px;
+    color: white;
+  }
+  
+  .homepage-title > Button:hover {
+    background-color: white;
+  }
+  
+  .img {
+    /* justify-content: center; */
+    margin: 50px;
+    height: 456px;
+    width: 20px;
+  }
+  
+.lite-info {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    /* width: 80rem; */
+    border-style: outset;
+}  
+
+.murid {
+    justify-content: center;
+    display: flex;
+    width: 600px;
+    height: 90px;
+}
+
+.kursus {
+    justify-content: center;
+    display: flex;
+    width: 600px;
+    height: 90px;
+}
+
+.produk {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card-product {
+  align-items: center;
+  margin: 16px;
+}
+
+.content-class {
+  list-style: none;
+}
+
+.artikel {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}

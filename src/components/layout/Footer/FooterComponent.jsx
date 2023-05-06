@@ -2,18 +2,18 @@ import React from "react";
 import { Col, Row, Layout } from "antd";
 import "./footerComponent.css";
 // import { FooterAltera } from "../../../assets/index";
-import {
-  CopyrightOutlined,
-  FacebookOutlined,
-  TwitterOutlined,
-  InstagramOutlined,
-} from "@ant-design/icons";
+// import {
+//   CopyrightOutlined,
+//   FacebookOutlined,
+//   TwitterOutlined,
+//   InstagramOutlined,
+// } from "@ant-design/icons";
 
 const FooterComponent = () => {
   const { Footer } = Layout;
   return (
     <>
-      <Footer className="footer">
+      {/* <Footer className="footer">
         <Row>
           <Col span={8}>
             <div className="content-copy">
@@ -96,7 +96,14 @@ const FooterComponent = () => {
             </div>
           </Col>
         </Row>
-      </Footer>
+      </Footer> */}
+       <Footer
+          style={{
+            textAlign: "center",
+          }}
+        >
+          Ant Design ©2023 Created by Ant UED
+        </Footer>
     </>
   );
 };

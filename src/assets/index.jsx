@@ -15,5 +15,5 @@ import BoorkmarkIcon from "./images/BoorkmarkIcon.svg";
 import BagIcon from "./images/BagIcon.svg";
 import LearnImage from "./images/LearnImage.svg";
 
-export { Navbar, FooterAltera, Cover1, Toga, Mentoring, Offline, Online, OfflineClassHeader, OfflineClassSection1, UsersIcon, MessageIcon, DollarIcon, BoorkmarkIcon, BagIcon, LearnImage};
+export { Navbar, FooterAltera, Cover1, Toga, Mentoring, Offline, Online, OfflineClassHeader, OfflineClassSection1, UsersIcon, MessageIcon, DollarIcon, BoorkmarkIcon, BagIcon, LearnImage, Logo};
 

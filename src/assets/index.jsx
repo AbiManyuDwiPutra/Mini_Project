@@ -18,6 +18,10 @@ import HeroCourse from "./images/hero-about.svg";
 import ArtDesign from "./images/art-design.svg";
 import TraditionalDance from "./images/traditional-dance.svg";
 import MusicPoet from "./images/music-poet.svg";
+import SangkarPilu from "./images/cardsData-1.svg";
+import PutusCinta from "./images/cardsData-2.svg";
+import SecarikDialog from "./images/cardsData-3.svg";
+import KataMereka from "./images/kataMereka-1.svg";
 
 export {
   Logo,
@@ -38,4 +42,8 @@ export {
   ArtDesign,
   TraditionalDance,
   MusicPoet,
+  SangkarPilu,
+  PutusCinta,
+  SecarikDialog,
+  KataMereka,
 };

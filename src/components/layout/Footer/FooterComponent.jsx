@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Row, Layout } from "antd";
 import "./footerComponent.css";
 // import { FooterAltera } from "../../../assets/index";
@@ -13,7 +12,7 @@ const FooterComponent = () => {
   const { Footer } = Layout;
   return (
     <>
-      {/* <Footer className="footer">
+       {/* <Footer className="footer">
         <Row>
           <Col span={8}>
             <div className="content-copy">
@@ -22,7 +21,7 @@ const FooterComponent = () => {
               <a
                   href="https://alterrabills.id/"
                   className="cr"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   <CopyrightOutlined />
                   <b>. All rights reserved</b>
@@ -62,7 +61,7 @@ const FooterComponent = () => {
                   <a
                     href="https://www.facebook.com/alterra.id?locale=id_ID"
                     className="fb"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <FacebookOutlined /> Facebook{" "}
                   </a>
@@ -74,7 +73,7 @@ const FooterComponent = () => {
                   <a
                     href="https://twitter.com/AlterraA"
                     className="twt"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <TwitterOutlined /> Twitter{" "}
                   </a>
@@ -86,7 +85,7 @@ const FooterComponent = () => {
                   <a
                     href="https://www.instagram.com/alterra.id/"
                     className="ig"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <InstagramOutlined /> Instagram{" "}
                   </a>
@@ -95,7 +94,8 @@ const FooterComponent = () => {
               <br />
             </div>
           </Col>
-        </Row>  */}
+        </Row>  
+      </Footer> */}
        <Footer
           style={{
             textAlign: "center",

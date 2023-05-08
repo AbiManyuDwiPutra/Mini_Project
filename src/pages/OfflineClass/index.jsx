@@ -16,54 +16,65 @@ import {
 import { rewardData, timelineData } from "./constants";
 import YouTube from "react-youtube";
 import { Button } from "antd";
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import { ADD_OFFLINE_CLASS, GET_OFFLINE_CLASS } from "./query";
 import { useMutation } from "@apollo/client";
+import { useEffect } from "react";
 
 const OfflineClass = () => {
-
   const [register] = useMutation(ADD_OFFLINE_CLASS, {
     refetchQueries: [GET_OFFLINE_CLASS],
   });
 
   const { Title } = Typography;
-  const MySwal = withReactContent(Swal)
+  const MySwal = withReactContent(Swal);
 
-  const onCheckout = async() =>{
+  const onCheckout = async () => {
     MySwal.fire({
-      title: 'Checkout Form',
+      title: "Checkout Form",
       html: `
       <input type="text" id="Nama" class="swal2-input" placeholder="Nama">
       <input type="text" id="Alamat" class="swal2-input" placeholder="Alamat">
       <input type="number" id="NoHp" class="swal2-input" placeholder="No Whatsapp">`,
-      confirmButtonText: 'Checkout',
+      confirmButtonText: "Checkout",
       allowOutsideClick: false,
       focusConfirm: true,
       preConfirm: () => {
-        const nama = MySwal.getPopup().querySelector('#Nama').value
-        const noHp = MySwal.getPopup().querySelector('#NoHp').value
-        const alamat = MySwal.getPopup().querySelector('#Alamat').value
+        const nama = MySwal.getPopup().querySelector("#Nama").value;
+        const noHp = MySwal.getPopup().querySelector("#NoHp").value;
+        const alamat = MySwal.getPopup().querySelector("#Alamat").value;
         if (!nama || !noHp || !alamat) {
-          MySwal.showValidationMessage(`Silahkan isi form terlebih dahulu`)
-        }else{
+          MySwal.showValidationMessage(`Silahkan isi form terlebih dahulu`);
+        } else {
           register({
-            variables: {"nama":nama,"alamat":alamat,"no_hp":noHp},
+            variables: { nama: nama, alamat: alamat, no_hp: noHp },
             onError: (err) => {
-              MySwal.fire('', err.message, 'error')
+              MySwal.fire("", err.message, "error");
             },
             onCompleted: () => {
-              Swal.fire('', 'Pendaftaran berhasil, silahkan lanjutkan melalui Whatsapp', 'success')
+              Swal.fire(
+                "",
+                "Pendaftaran berhasil, silahkan lanjutkan melalui Whatsapp",
+                "success"
+              );
             },
           });
         }
-        return { nama: nama, noHp: noHp, alamat: alamat }
-      }
+        return { nama: nama, noHp: noHp, alamat: alamat };
+      },
     }).then((result) => {
-      let message  = 'Hai, perkenalkan nama saya '+result.value.nama+' dari '+result.value.alamat+'. Saya tertarik dan ingin bergabung dalam kelas!'
-      window.open('https://api.whatsapp.com/send?phone=6281224114446&text='+message);
-    })
-  }
+      let message =
+        "Hai, perkenalkan nama saya " +
+        result.value.nama +
+        " dari " +
+        result.value.alamat +
+        ". Saya tertarik dan ingin bergabung dalam kelas!";
+      window.open(
+        "https://api.whatsapp.com/send?phone=6281224114446&text=" + message
+      );
+    });
+  };
 
   const opts = {
     height: "390",
@@ -77,6 +88,9 @@ const OfflineClass = () => {
     event.target.pauseVideo();
   };
 
+  useEffect(() => {
+    
+  }, []);
   return (
     <>
       <Row gutter={[16, 16]} justify={"start"}>

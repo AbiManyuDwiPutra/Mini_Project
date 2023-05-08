@@ -4,12 +4,19 @@ import "./course.css";
 import { CardSection } from "./constants";
 import { Card } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Course = () => {
   const navigate = useNavigate();
-  const onClickMusicPoet = () => {
-    navigate("/offlineClass");
+
+  const onClickMusicPoet = (paramLink) => {
+    navigate(paramLink);
   };
+
+  useEffect(()=>{
+
+  },[])
+
   return (
     <>
       <Row gutter={[16, 16]} justify={"start"}>
@@ -44,7 +51,7 @@ const Course = () => {
                   color: "white",
                   border: 0,
                 }}
-                onClick={onClickMusicPoet}
+                onClick={()=>{onClickMusicPoet(data.link)}}
               >
                 Mulai
               </Button>

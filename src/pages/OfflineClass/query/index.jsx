@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const GET_OFFLINE_CLASS = gql`
-  {
+  query offline_class{
     offline_class {
         alamat
         id

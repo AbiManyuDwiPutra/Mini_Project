@@ -95,7 +95,7 @@ const FooterComponent = () => {
               <br />
             </div>
           </Col>
-        </Row>
+        </Row>  */}
        <Footer
           style={{
             textAlign: "center",

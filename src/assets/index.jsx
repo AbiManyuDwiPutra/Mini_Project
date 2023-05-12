@@ -22,6 +22,9 @@ import SangkarPilu from "./images/cardsData-1.svg";
 import PutusCinta from "./images/cardsData-2.svg";
 import SecarikDialog from "./images/cardsData-3.svg";
 import KataMereka from "./images/kataMereka-1.svg";
+import MusikTradisional from "./images/musikTradisional.svg";
+import PemahamanNada from "./images/pemahamanNada.svg";
+import RewardIcon from "./images/rewardIcon.svg";
 
 export {
   Logo,
@@ -46,4 +49,7 @@ export {
   PutusCinta,
   SecarikDialog,
   KataMereka,
+  MusikTradisional,
+  PemahamanNada,
+  RewardIcon,
 };

@@ -41,7 +41,7 @@ const HomePage = () => {
               Memberi Anda sistem pembelajaran online dan offline yang membantu
               pengetahuan Seni Anda
             </p>
-            <Button>Get Started</Button>
+            <Button onClick={onClickOfflineClass}>Get Started</Button>
           </div>
         </Col>
         <Col xs={24} xl={12}>
@@ -251,7 +251,7 @@ const HomePage = () => {
                 hoverable
                 style={{
                   width: 400,
-                  height: 400,
+                  height: 250,
                   marginTop: 30,
                   marginLeft: 60,
                 }}

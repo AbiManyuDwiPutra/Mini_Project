@@ -2,17 +2,11 @@ import { Col, Row, Card } from "antd";
 import "./offlineClass.css";
 import {
   OfflineClassSection1,
-  Offline,
-  LearnImage,
   OfflineClassHeader,
+  PemahamanNada,
+  MusikTradisional,
 } from "../../assets/index";
 import { Typography } from "antd";
-import {
-  ClockCircleOutlined,
-  FileSearchOutlined,
-  FileTextOutlined,
-  ProjectOutlined,
-} from "@ant-design/icons";
 import { rewardData, timelineData } from "./constants";
 import YouTube from "react-youtube";
 import { Button } from "antd";
@@ -88,9 +82,7 @@ const OfflineClass = () => {
     event.target.pauseVideo();
   };
 
-  useEffect(() => {
-    
-  }, []);
+  useEffect(() => {}, []);
   return (
     <>
       <Row gutter={[16, 16]} justify={"start"}>
@@ -116,8 +108,13 @@ const OfflineClass = () => {
           <div className="offlineClass-about">
             <h3>Tentang Program Ini</h3>
             <p>
-              Memberi Anda sistem pembelajaran online dan offline yang membantu
-              pengetahuan Seni Anda
+              Program musikalisasi jiwa merupakan salah satu dari beberapa
+              program yang disediakan oleh remedial. Program ini disediakan tak
+              hanya memberikan pelajaran musik biasa, namun juga membantu
+              mengembangkan dunia musik tanah air dengan mengasah bakat para
+              individu. Musikalisasi Jiwa menyediakan berbagai kelas sesuai
+              dengan kebutuhan bagi siswa siswa SMA yang ingin belajar secara
+              interaktif dan menyenangkan.
             </p>
           </div>
         </Col>
@@ -126,11 +123,11 @@ const OfflineClass = () => {
         <h1>Apa Yang Kamu Dapatkan?</h1>
         <Row gutter={[16, 16, 16]}>
           {rewardData.map((data, index) => (
-            <Col xs={24} sm={12} md={8} key={index}>
+            <Col xs={24} sm={12} md={12} key={index}>
               <div className="div-reward">
-                <img height={110} src={data.image} alt="" />
+                <img height={90} src={data.image} alt="" style={{ marginRight: 20}}/>
                 <p
-                  style={{ marginTop: 25, fontWeight: "bold" }}
+                  style={{ marginLeft: 25, fontWeight: "bold" }}
                   className="reward-text"
                 >
                   {data.title} <br />
@@ -144,10 +141,14 @@ const OfflineClass = () => {
       <div className="section2-offlineClass">
         <div className="section2-offlineClass-content">
           <p>
-            Remedial.id menyediakan layanan untuk pembeljaran bla bla bla
-            asjbabdasbkjsdbksddnkdsbfksdbkdsbfksdfbskdbfsjdkbfkdsjbfskjdbfsjdkbfsdjkbfksjd
-            bfskdjbfjskdbfjsdbfjsdbfjdsbfjsdbf
-            jsdbfjdbfjdbfjdbfjdbfjdbjsdkdbfskjbfksjdbfksjdfbksjdbfksddjfbsdjkf
+            Remedial merupakan program yang Serrum lakukan selama 6 bulan di
+            awal tahun ajaran baru. Kegiatan ini melibatkan murid SMA (pilihan)
+            di Jakarta dan sekitarnya yang berfokus pada pola menggali minat
+            siswa dalam mencari pengetahuan sesuai dengan konteks anak dan
+            zamannya. Dengan metode saling silang informasi yang menghasilkan
+            pengetahuan dan pendekatan seni dan literasi. Setiap siswa memiliki
+            ketertarikan individu dalam mencari tahu pengetahuan, secara tidak
+            sadar telah dilakukan mereka.
           </p>
         </div>
         <div className="card-product-offlineClass">
@@ -164,32 +165,16 @@ const OfflineClass = () => {
                 className="box-shadow"
                 hoverable
                 style={{ width: "100%", margin: "16px" }}
-                cover={<img alt="example" src={LearnImage} />}
+                cover={<img alt="example" src={PemahamanNada} />}
               >
                 <Title>Pemahaman Nada</Title>
                 <hr />
                 <div className="content-offlineClass">
-                  <ul style={{ listStyle: "none" }}>
-                    <li>
-                      <ClockCircleOutlined />
-                      {"  "}
-                      Modul Pembelajaran apa aja
-                    </li>
-                    <li>
-                      <FileTextOutlined />
-                      {"  "}
-                      Modul 1: Nada Dasar Mayor
-                    </li>
-                    <li>
-                      <ProjectOutlined />
-                      {"  "}
-                      Modul 2: Nada Dasar Minor
-                    </li>
-                    <li>
-                      <FileSearchOutlined />
-                      {"  "}
-                      Belajar Mandiri
-                    </li>
+                  <ul>
+                    <li>Modul Pembelajaran Nada</li>
+                    <li>Modul 1: Nada Dasar Mayor</li>
+                    <li>Modul 2: Nada Dasar Minor</li>
+                    <li>Belajar Mandiri</li>
                   </ul>
                 </div>
               </Card>
@@ -199,32 +184,16 @@ const OfflineClass = () => {
                 className="box-shadow"
                 hoverable
                 style={{ width: "100%", margin: "16px" }}
-                cover={<img alt="example" src={Offline} />}
+                cover={<img alt="example" src={MusikTradisional} />}
               >
                 <Title>Musik Tradisional</Title>
                 <hr />
                 <div className="content-offlineClass">
-                  <ul style={{ listStyle: "none" }}>
-                    <li>
-                      <ClockCircleOutlined />
-                      {"  "}
-                      Waktu Fleksibel
-                    </li>
-                    <li>
-                      <FileTextOutlined />
-                      {"  "}
-                      Modul Online
-                    </li>
-                    <li>
-                      <ProjectOutlined />
-                      {"  "}
-                      Kuis
-                    </li>
-                    <li>
-                      <FileSearchOutlined />
-                      {"  "}
-                      Belajar Mandiri
-                    </li>
+                  <ul>
+                    <li>Waktu Fleksibel</li>
+                    <li>Modul Online</li>
+                    <li>Kuis</li>
+                    <li>Belajar Mandiri</li>
                   </ul>
                 </div>
               </Card>
@@ -233,7 +202,7 @@ const OfflineClass = () => {
         </div>
         <div className="section-timeline">
           <h1>TIMELINE</h1>
-          <Row style={{ marginTop: 50 }}>
+          <Row gutter={[90]} style={{ marginTop: 50 }} justify="center">
             {timelineData.map((data, index) => (
               <Col key={index}>
                 <div className="div-timeline">
@@ -248,7 +217,7 @@ const OfflineClass = () => {
                       {data.no}
                     </p>
                   </div>
-                  <p style={{}} className="text-timeline">
+                  <p style={{textAlign: "center"}} className="text-timeline">
                     {data.time} <br />
                     <p style={{ fontWeight: "normal", textAlign: "center" }}>
                       {" "}
@@ -279,7 +248,7 @@ const OfflineClass = () => {
               <label className="video-offlineClass-tag-title">
                 Belajar Bersama untuk Mencapai Tujuan
               </label>
-              <p>bakskbsdjkasbdkjabsdkjasbdjkandkasjndasjd asjkdkjsbdjkbds</p>
+              <p>Tunggu apalagi? Segera daftarkan diri Anda!</p>
             </div>
             <Button
               style={{

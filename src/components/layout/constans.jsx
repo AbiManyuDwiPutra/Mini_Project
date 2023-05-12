@@ -11,19 +11,12 @@ export const MENU_ITEM = [
     label: <Link to="/course">Course</Link>,
     key: "/course",
   },
-{
-  label: (
-    <Link to="/loginPage">
-      <Button
-        type="primary"
-        danger
-      >
-        Admin
-      </Button>
-    </Link>
-  ),
-  key: "6",
-},
-
-
+  {
+    label: (
+      <Link to="/loginPage">
+        <Button type="primary">Admin</Button>
+      </Link>
+    ),
+    key: "6",
+  },
 ];

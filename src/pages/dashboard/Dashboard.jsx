@@ -75,10 +75,6 @@ const FormComponentExp = () => {
       dataIndex: "password",
     },
     {
-      title: "Timestamp",
-      dataIndex: "timestamp",
-    },
-    {
       title: "Action",
       dataIndex: "action",
       render: (_, record) =>
@@ -101,12 +97,13 @@ const FormComponentExp = () => {
     {
       key: '1',
       label: `User List`,
-      children: <Table columns={DATA_PROFILE_COLUMN_OPT} dataSource={dataUser} rowKey={"username"} />,
+      children: <Table columns={DATA_PROFILE_COLUMN_OPT} dataSource={dataUser} loading={isLoadingDataProfile} rowKey={"username"} />,
+      style: { backgroudnColor : 'orange'}
     },
     {
       key: '2',
       label: `Offline Class List`,
-      children: <Table columns={DATA_OC_COLUMN_OPT} dataSource={dataOC} rowKey={"id"} />,
+      children: <Table columns={DATA_OC_COLUMN_OPT} dataSource={dataOC} loading={isLoadingDataOC} rowKey={"id"} />,
     }
   ];
 
@@ -128,7 +125,7 @@ const FormComponentExp = () => {
         <LoadingComponent />
       ) : (
         <> */}
-          <Title>Form Biodata Mahasiswa</Title>
+          <Title>Daftar Siswa & User</Title>
 
           <Gap height={30} />
 

@@ -27,21 +27,21 @@ export const cardsData = [
 
 export const faqData = [
   {
-    title: "Platform Hebat !!",
+    title: "Seru Banget",
     description:
-      "Diamku adalah sebait kata Yang takkan pernah bisa menjadi paragraf, Aksaraku sepi, Sendu, Mengais pada senja yang ingin terpejam. Sudut lampu kota serta langit gelap adalah senduku Mereka seakan berbicara dalam alam bawah sadarku ‘untuk apa bertahan sedangkan ia mencintai wanita lain?’",
+      "Pembelajaran yang diberikan seru banget karena ga cuma teori tapi experiencenya enakk!!!",
     foto: KataMereka
   },
   {
     title: "Platform Hebat !!",
     description:
-      "Diamku adalah sebait kata Yang takkan pernah bisa menjadi paragraf, Aksaraku sepi, Sendu, Mengais pada senja yang ingin terpejam. Sudut lampu kota serta langit gelap adalah senduku Mereka seakan berbicara dalam alam bawah sadarku ‘untuk apa bertahan sedangkan ia mencintai wanita lain?’",
+      "Enak banget ada platform kaya gini bisa ngebantu buat ekspresiin diri kita di bidang seni",
     foto: KataMereka
   },
   {
-    title: "Platform Hebat !!",
+    title: "Mentor Mantab",
     description:
-      "Diamku adalah sebait kata Yang takkan pernah bisa menjadi paragraf, Aksaraku sepi, Sendu, Mengais pada senja yang ingin terpejam. Sudut lampu kota serta langit gelap adalah senduku Mereka seakan berbicara dalam alam bawah sadarku ‘untuk apa bertahan sedangkan ia mencintai wanita lain?’",
+      "Mentor yang ada disini gila experiencenya manteb banget teruji oleh waktu Anjayy!!",
     foto: KataMereka
   },
 ]
